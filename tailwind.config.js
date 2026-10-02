@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -39,6 +40,8 @@ export default {
         'float': 'float 4s ease-in-out infinite',
         'float-slow': 'float 6s ease-in-out infinite',
         'wiggle': 'wiggle 1s ease-in-out infinite',
+        'bounce-slow': 'bounce-slow 2s ease-in-out infinite',
+        'ping-slow': 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
       },
       keyframes: {
         marquee: {
@@ -56,6 +59,10 @@ export default {
         wiggle: {
           '0%, 100%': { transform: 'rotate(-2deg)' },
           '50%': { transform: 'rotate(2deg)' },
+        },
+        'bounce-slow': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-6px)' },
         }
       }
     },
